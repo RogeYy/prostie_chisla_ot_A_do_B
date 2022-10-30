@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+
+	int numA, numB, count = 1, count_num = 0;
+
+	cin >> numA >> numB;
+
+	for (; numA < numB + 1; numA++)
+	{
+
+		for (int i = 1; i < numA; i++)
+		{
+
+			count_num = numA % i;
+
+			if (count_num == 0) count += 1;
+
+		}
+		
+		if (count == 2) cout << numA << " ";
+
+		count = 1;
+
+	}
+
+}
